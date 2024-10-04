@@ -22,7 +22,7 @@ public class Card {
   public void setName(String name) {
     this.name = name;
   }
-  public void describe() {
-    System.out.println(name + " of " + value );
+  public String describe() {
+    return name + " of " + value ;
   }
 }

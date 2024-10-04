@@ -3,7 +3,6 @@ package week06;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import week06.Card;
 
 public class Deck{
   List<Card> cards = new ArrayList<Card>();

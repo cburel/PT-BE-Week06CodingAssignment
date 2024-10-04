@@ -8,8 +8,17 @@ public class Player {
   int score;
   String name;
   
-  Player(){
+  Player(String name){
+    this.name = name;
     this.score = 0;
+  }
+
+  public String getName() {
+    return name;
+  }
+  
+  public int getScore() {
+    return score;
   }
   
   public void describe(List<Card> hand) {
@@ -24,13 +33,12 @@ public class Player {
     return card;
   }
   
-  public Card draw(Deck deck) {
+  public void draw(Deck deck) {
     Card card = deck.draw();
-    return card;
+    this.hand.add(card);
   }
   
   public void incrementScore() {
     this.score++;
-  }
-  
+  } 
 }
