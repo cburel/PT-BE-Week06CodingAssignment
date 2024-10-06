@@ -24,7 +24,6 @@ public class App {
       System.out.println(playerOne.getName() + " drew the " + cardOne.describe());
       Card cardTwo = playerTwo.flip();
       System.out.println(playerTwo.getName() + " drew the " + cardTwo.describe());
-      cardTwo.describe();
       if (cardOne.getName().compareTo(cardTwo.getName()) > 0) {
         playerOne.incrementScore();
         System.out.println(playerOne.getName() + " +1! Score: " + playerOne.getScore());
