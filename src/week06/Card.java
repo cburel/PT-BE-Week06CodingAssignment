@@ -8,9 +8,6 @@ public class Card {
   Value value;
   Name name;
   
-  // default constructor
-  public Card() {}
-  
   // constructor. create the card
   public Card(Name name, Value value) {
     this.name = name;
