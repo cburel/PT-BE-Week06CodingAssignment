@@ -25,11 +25,11 @@ public class App {
       Card cardTwo = playerTwo.flip();
       System.out.println(playerTwo.getName() + " drew the " + cardTwo.describe());
       cardTwo.describe();
-      if (cardOne.getValue() > cardTwo.getValue()) {
+      if (cardOne.getName().compareTo(cardTwo.getName()) > 0) {
         playerOne.incrementScore();
         System.out.println(playerOne.getName() + " +1! Score: " + playerOne.getScore());
       }
-      else if (cardOne.getValue()< cardTwo.getValue()) {
+      else if (cardOne.getName().compareTo(cardTwo.getName()) < 0) {
         playerTwo.incrementScore();
         System.out.println(playerTwo.getName() + " +1! Score: " + playerTwo.getScore());
       }

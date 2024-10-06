@@ -9,16 +9,18 @@ public class Deck{
   // create a list of cards for the deck
   List<Card> cards = new ArrayList<Card>();
   
+  
+  enum Value {CLUBS, DIAMONDS, HEARTS, SPADES}
+  enum Name {TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE}
+  
   // constructor. init the deck
   Deck() {
-    String[] values = {"Clubs", "Diamonds", "Hearts", "Spades"};
-    String[] names = {"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
     
     // add each card to the deck
-    for (String value : values) {
+    for (Value value : Value.values()) {
       int i = 2;
-      for (String name : names) {
-        Card card = new Card(name, i);
+      for (Name name : Name.values()) {
+        Card card = new Card(name, value);
         this.cards.add(card);
         i++;
       }
